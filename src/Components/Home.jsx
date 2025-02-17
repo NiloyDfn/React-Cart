@@ -1,21 +1,20 @@
 import React from "react";
 import toast from "react-hot-toast";
-import img1 from "../assets/canvas.jpeg"
-import img2 from "../assets/OIP (1).jpeg"
+import img1 from "../assets/i.jpg";
+import img2 from "../assets/k.jpg";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/reducer";
 
 const Home = () => {
-
   const productList = [
-    { name: "mac book", price: 12, imgSrc: img1, id: "kdlslfksfjsdjfs" },
-    { name: "shoes", price: 24, imgSrc: img2, id: "slfjlfdlskjls" },
+    { name: "iphone", price: 1222, imgSrc: img1, id: "kdlslfksfjsdjfs" },
+    { name: "bike", price: 240000, imgSrc: img2, id: "slfjlfdlskjls" },
   ];
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const addToCartHandler = (options) => {
-   dispatch(addToCart(options))
+    dispatch(addToCart(options));
     toast.success("added to cart");
   };
   return (
